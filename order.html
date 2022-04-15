@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Moon's Kitchen - About</title>
+    <title>Moon's Kitchen - Order</title>
 
-	<link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-	<link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 
-	<script src="https://kit.fontawesome.com/21063e23e8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/21063e23e8.js" crossorigin="anonymous"></script>
 
-	<script src="js/order.js"></script>
+    <script src="js/order.js"></script>
 </head>
+
 <body>
-	<header id="header">
-		<p><q>No one is born a great cook, one learns by doing.</q> - Julia Child</p>
+    <header id="header">
+        <p><q>No one is born a great cook, one learns by doing.</q> - Julia Child</p>
 
-		<h1><a href="index.html">Moon's Kitchen</a></h1>
-
-		
-
-		<nav>
-			<ul>
-				<li class="menu-item"><a href="index.html">Home</a></li>
-
-				<li class = "menu-item"><span>Recipes</span>
-
-					<ul class = "dropdown">
-						<li class="menu-sub-item"><a href="recipes/spring-rolls.html">Spring Rolls</a></li>
-
-						<li class="menu-sub-item"><a href="recipes/caramel-shrimp.html">Caramel Shrimp</a></li>
-
-						<li class="menu-sub-item"><a href="recipes/fried-tofu.html">Fried Tofu</a></li>
-					</ul>
-				</li>
-
-				<li class="menu-item"><a href="order.html">Order</a></li>
-
-				<li class="menu-item"><a href="about.html">About</a></li>
+        <h1><a href="index.html">Moon's Kitchen</a></h1>
 
 
-				<li class="menu-item"><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
 
-	<main>
-		<form>
-			<label for="food">Select Food</label>
-			<select id="food" name="Select Food" required>
+        <nav>
+            <ul>
+                <li class="menu-item"><a href="index.html">Home</a></li>
+
+                <li class="menu-item"><span>Recipes</span>
+
+                    <ul class="dropdown">
+                        <li class="menu-sub-item"><a href="recipes/spring-rolls.html">Spring Rolls</a></li>
+
+                        <li class="menu-sub-item"><a href="recipes/caramel-shrimp.html">Caramel Shrimp</a></li>
+
+                        <li class="menu-sub-item"><a href="recipes/fried-tofu.html">Fried Tofu</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a href="order.html">Order</a></li>
+
+                <li class="menu-item"><a href="about.html">About</a></li>
+
+
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <label for="food">Select Food</label>
+            <select id="food" name="Select Food" required onchange="validateFood()">
 				<option value="" disabled selected>--Select your food--</option>
 				<option value="spring-rolls">Spring Rolls</option>
 				<option value="caramel-shrimp">Caramel Shrimp</option>
 				<option value="fried-tofu">Fried Tofu</option>
 			</select>
+            <div class="error-message" id="food_error"></div><br>
 
-			<label for="name">Full Name</label>
-			<input type="text" id="name" name="fullname" placeholder="Your name..." required maxlength="100">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="fullname" placeholder="Your name..." required onkeyup="validateName()">
+            <div class="error-message" id="name_error"></div><br>
 
-			<label for="note">Note</label>
-			<input type="text" id="note" name="note" placeholder="Delivery hour,..." maxlength="30">
+            <label for="note">Note</label>
+            <input type="text" id="note" name="note" placeholder="Delivery hour,..." onkeyup="validateNote()">
+            <div class="error-message" id="note_error"></div><br> Drinks
+            <label><input type="checkbox" id="coffee" name="drinks" value="coffee"> Coffee</label>
+            <label><input type="checkbox" id="tea" name="drinks" value="tea"> Tea</label>
+            <label><input type="checkbox" id="coke" name="drinks" value="coke"> Coke</label><br><br>
 
-			Drinks
-			
-			<label><input type="checkbox" id="coffee" name="drinks" value="coffee"> Coffee</label>
-			<label><input type="checkbox" id="tea" name="drinks" value="tea"> Tea</label>
-			<label><input type="checkbox" id="coke" name="drinks" value="coke"> Coke</label><br><br>
+            <label for="date">Deliver Date</label>
+            <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" required onchange="validateDate()">
+            <div class="error-message" id="date_error"></div><br>
 
-			<label for="date">Deliver Date</label>
-			<input type="date" id="date" name="date" placeholder="mm/dd/yyyy" required>
+            <label for="address">Address</label>
+            <textarea id="address" name="address" placeholder="Your address..." required onkeyup="validateAddress()"></textarea>
+            <div class="error-message" id="address_error"></div><br> Call before deliver?
+            <label><input type="radio" id="yes" name="call" value="yes"> Yes</label>
+            <label><input type="radio" id="no" name="call" value="no" checked="true"> No</label><br><br>
 
-			<label for="address">Address</label>
-			<textarea id="address" name="address" placeholder="Your address..." required maxlength="500"></textarea>
+            <input type="submit" value="Order now" onclick="validateForm()">
+        </form>
+    </main>
 
-			Call before deliver?
-			
-			<label><input type="radio" id="yes" name="call" value="yes"> Yes</label>
-			<label><input type="radio" id="no" name="call" value="no" checked="true"> No</label><br><br>
-
-			<input type="submit" value="Order now">
-		</form>
-	</main>
-
-	<footer>
-		<p>&copy; 2022 by Moon's Kitchen</p>
-		<a href="#header">Go to top</a>
-	</footer>
+    <footer>
+        <p>&copy; 2022 by Moon's Kitchen</p>
+        <a href="#header">Go to top</a>
+    </footer>
 </body>
+
 </html>

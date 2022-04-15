@@ -7,12 +7,12 @@ function validateForm() {
 
 
 function validateName() {
-    let name = document.getElementById('name').value;
+    let nameLength = document.getElementById('name').value.trim().length;
     let nameError = document.getElementById('name_error');
 
-    if (name === '') {
+    if (nameLength == 0) {
         nameError.innerHTML = "Please fill out your name.";
-    } else if (name.length > 100) {
+    } else if (nameLength > 100) {
         nameError.innerHTML = "Your name should not exceed 100 characters.";
     } else {
         nameError.innerHTML = "";
@@ -20,12 +20,12 @@ function validateName() {
 }
 
 function validateEmail() {
-    let email = document.getElementById('email').value;
+    let emailLength = document.getElementById('email').value.trim().length;
     let emailError = document.getElementById('email_error');
 
-    if (email === '') {
+    if (emailLength == 0) {
         emailError.innerHTML = "Please fill out your email.";
-    } else if (email.length > 100) {
+    } else if (emailLength > 100) {
         emailError.innerHTML = "Your email should not exceed 100 characters.";
     } else {
         emailError.innerHTML = "";
@@ -33,14 +33,14 @@ function validateEmail() {
 }
 
 function validateSubject() {
-    let subject = document.getElementById('subject').value;
+    let subjectLength = document.getElementById('subject').value.trim().length;
     let subjectError = document.getElementById('subject_error');
 
-    if (subject === '') {
+    if (subjectLength == 0) {
         subjectError.innerHTML = "Please fill out the subject.";
-    } else if (subject.length < 50) {
+    } else if (subjectLength < 50) {
         subjectError.innerHTML = "Subject should not shorter than 50 characters.";
-    } else if (subject.length > 250) {
+    } else if (subjectLength > 250) {
         subjectError.innerHTML = "Subject should not exceed 250 characters.";
     } else {
         subjectError.innerHTML = "";
@@ -48,14 +48,18 @@ function validateSubject() {
 }
 
 function validateMessage() {
-    let message = document.getElementById('message').value;
+    let messageLength = document.getElementById('message').value.trim().length;
     let messageError = document.getElementById('message_error');
 
-    if (message === '') {
+    if (messageLength == 0) {
         messageError.innerHTML = "Please fill out the message.";
-    } else if (message.length > 500) {
+    } else if (messageLength > 500) {
         messageError.innerHTML = "Message should not exceed 500 characters.";
     } else {
         messageError.innerHTML = "";
     }
+}
+
+function onSubmit() {
+    alert("Success!");
 }

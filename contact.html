@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Moon's Kitchen - About</title>
+    <title>Moon's Kitchen - Contact</title>
 
-	<link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
-	<link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 
-	<script src="https://kit.fontawesome.com/21063e23e8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/21063e23e8.js" crossorigin="anonymous"></script>
 
-	<script src="js/contact.js"></script>
+    <script src="js/contact.js"></script>
 </head>
+
 <body>
-	<header id="header">
-		<p><q>No one is born a great cook, one learns by doing.</q> - Julia Child</p>
+    <header id="header">
+        <p><q>No one is born a great cook, one learns by doing.</q> - Julia Child</p>
 
-		<h1><a href="index.html">Moon's Kitchen</a></h1>
-
-		
-
-		<nav>
-			<ul>
-				<li class="menu-item"><a href="index.html">Home</a></li>
-
-				<li class = "menu-item"><span>Recipes</span>
-
-					<ul class = "dropdown">
-						<li class="menu-sub-item"><a href="recipes/spring-rolls.html">Spring Rolls</a></li>
-
-						<li class="menu-sub-item"><a href="recipes/caramel-shrimp.html">Caramel Shrimp</a></li>
-
-						<li class="menu-sub-item"><a href="recipes/fried-tofu.html">Fried Tofu</a></li>
-					</ul>
-				</li>
-
-				<li class="menu-item"><a href="order.html">Order</a></li>
-
-				<li class="menu-item"><a href="about.html">About</a></li>
+        <h1><a href="index.html">Moon's Kitchen</a></h1>
 
 
-				<li class="menu-item"><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
 
-	<main>
-		<form>
-			<label for="name">Full Name</label>
-			<input type="text" id="name" name="fullname" placeholder="Your name..." required onchange="validateName()">
-			<div class="error-message" id="name_error"></div><br>
-			
-			<label for="email">Email</label>
-			<input type="email" id="email" name="email" placeholder="Your email..." required onchange="validateEmail()">
-			<div class="error-message" id="email_error"></div><br>
+        <nav>
+            <ul>
+                <li class="menu-item"><a href="index.html">Home</a></li>
+
+                <li class="menu-item"><span>Recipes</span>
+
+                    <ul class="dropdown">
+                        <li class="menu-sub-item"><a href="recipes/spring-rolls.html">Spring Rolls</a></li>
+
+                        <li class="menu-sub-item"><a href="recipes/caramel-shrimp.html">Caramel Shrimp</a></li>
+
+                        <li class="menu-sub-item"><a href="recipes/fried-tofu.html">Fried Tofu</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a href="order.html">Order</a></li>
+
+                <li class="menu-item"><a href="about.html">About</a></li>
 
 
-			<label for="subject">Subject</label>
-			<input type="text" id="subject" name="subject" placeholder="Email subject ..." required onchange="validateSubject()">
-			<div class="error-message" id="subject_error"></div><br>
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-			<label for="message">Message</label>
-			<textarea id="message" name="message" placeholder="Write something..." required onchange="validateMessage()"></textarea>
-			<div class="error-message" id="message_error"></div><br>
+    <main>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="fullname" placeholder="Your name..." required onkeyup="validateName()">
+            <div class="error-message" id="name_error"></div><br>
 
-			<input type="submit" value="Send message" onclick="validateForm()">
-		</form>
-	</main>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email..." required onkeyup="validateEmail()">
+            <div class="error-message" id="email_error"></div><br>
 
-	<footer>
-		<p>&copy; 2022 by Moon's Kitchen</p>
-		<a href="#header">Go to top</a>
-	</footer>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Email subject ..." required onkeyup="validateSubject()">
+            <div class="error-message" id="subject_error"></div><br>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something..." required onkeyup="validateMessage()"></textarea>
+            <div class="error-message" id="message_error"></div><br>
+
+            <input type="submit" value="Send message" onclick="validateForm()">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 by Moon's Kitchen</p>
+        <a href="#header">Go to top</a>
+    </footer>
 </body>
+
 </html>
