@@ -1,0 +1,51 @@
+@import "general.css";
+
+main {
+  height: 600px;
+}
+
+article {
+  float: left;
+  width: 30%;
+  display: inline-block;
+}
+
+article:first-of-type {
+  position: absolute;
+  left: 0;
+  margin-left: 2%;
+}
+
+article:nth-of-type(2) {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+article:last-of-type {
+  position: absolute;
+  right: 0;
+  margin-right: 2%;
+}
+
+article img {
+  width: 100%;
+}
+
+article div {
+  margin: 2%;
+}
+
+.article-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+
+article a {
+  color: black;
+}
+

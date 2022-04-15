@@ -1,0 +1,11 @@
+@import "general.css";
+main img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1rem;
+}
+
+main p {
+    line-height: 150%;
+}

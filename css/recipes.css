@@ -1,0 +1,84 @@
+@import "general.css";
+
+main {
+	position: relative;
+}
+
+main nav {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	min-width: 200px;
+}
+
+main nav ul li {
+	list-style-type: none;
+	background: black;
+	padding: 0.5rem 1rem;
+}
+
+main nav ul a{
+	color: white;
+}
+
+section {
+	line-height: 150%;
+}
+
+#note p {
+	padding-left: 10px;
+	border-left: 5px solid black;
+}
+
+
+#introduction img {
+	width: 30%;
+	float: left;
+}
+
+#introduction figcaption {
+	width: 20%;
+	float: left;
+	margin-left: 2rem;
+}
+
+#information {
+	position: relative;
+	clear: both;
+	margin-top: 20px;
+	border: 2px solid transparent;
+}
+
+#information ul {
+	float: left;
+}
+
+aside {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	font-style: italic;
+}
+
+table {
+	border: 1px dashed black;
+	border-radius: 10px;
+	padding: 0.3rem;
+}
+
+table th, table td  {
+	border: none;
+}
+
+#ingredients {
+	clear: both;
+}
+
+
+iframe {
+	width: 32em;
+	height: 18em;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}

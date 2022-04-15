@@ -1,0 +1,150 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    height: 250px;
+    background-image: url('../images/header-background.png');
+    background-size: 100% auto;
+    position: relative;
+}
+
+header p:first-of-type {
+    font-size: 80%;
+    position: absolute;
+    bottom: 0px;
+}
+
+header q {
+    font-style: italic;
+}
+
+header h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 400%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+header h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav {
+    position: absolute;
+    left: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul {
+    margin: 0;
+}
+
+header nav li {
+    float: left;
+    display: block;
+    position: relative;
+    padding: 1rem;
+}
+
+.dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    display: none;
+    min-width: 12rem;
+    margin-top: 1rem;
+}
+
+.menu-item {
+    min-width: 5rem;
+}
+
+.menu-item:hover>ul,
+.dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.menu-item a:hover,
+.menu-item span:hover {
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.menu-sub-item {
+    clear: both;
+    width: 100%;
+    font-size: 80%;
+}
+
+.menu-sub-item:hover {
+    font-size: 90%;
+    text-align: left;
+}
+
+main {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+main h2 {
+    font-size: 200%;
+}
+
+main h3 {
+    font-size: 150%;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.text-time {
+    font-size: 80%;
+}
+
+footer {
+    clear: both;
+}
+
+footer p {
+    font-size: 80%;
+    font-style: italic;
+}
+
+footer a {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1rem;
+    border: 2px black solid;
+    border-radius: 5px;
+    color: black;
+    background: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 80%;
+}

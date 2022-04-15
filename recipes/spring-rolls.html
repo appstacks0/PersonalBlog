@@ -9,46 +9,53 @@
 
 	<link rel="icon" type="image/png" href="../images/favicon.png">
 
+	<link rel="stylesheet" type="text/css" href="../css/recipes.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
 	<script src="https://kit.fontawesome.com/21063e23e8.js" crossorigin="anonymous"></script>
 
-	<style>
-		table, th, td {
-			border: 1px solid black;
-		}
-	</style>
 </head>
 <body>
 	<header id="header">
 		<p><q>No one is born a great cook, one learns by doing.</q> - Julia Child</p>
 
-		<h1>Moon's Kitchen</h1>
+		<h1><a href="../index.html">Moon's Kitchen</a></h1>
 
-		<hr>
+		
 
 		<nav>
-			<ul class="fa-ul">
-				<li><span class="fa-li"><i class="fa-solid fa-house"></i></span><a href="../index.html">Home</a></li>
+			<ul>
+				<li class="menu-item"><a href="../index.html">Home</a></li>
 
-				<li><span class="fa-li"><i class="fa-solid fa-utensils"></i></span>Recipes
-					<ol>
-						<li><a href="spring-rolls.html">Spring Rolls</a></li>
+				<li class = "menu-item"><span>Recipes</span>
 
-						<li><a href="caramel-shrimp.html">Caramel Shrimp</a></li>
+					<ul class = "dropdown">
+						<li class="menu-sub-item"><a href="spring-rolls.html">Spring Rolls</a></li>
 
-						<li><a href="fried-tofu.html">Fried Tofu</a></li>
-					</ol>
+						<li class="menu-sub-item"><a href="caramel-shrimp.html">Caramel Shrimp</a></li>
+
+						<li class="menu-sub-item"><a href="fried-tofu.html">Fried Tofu</a></li>
+					</ul>
 				</li>
 
-				<li><span class="fa-li"><i class="fa-solid fa-circle-info"></i></span><a href="../about.html">About</a></li>
+				<li class="menu-item"><a href="../order.html">Order</a></li>
+
+				<li class="menu-item"><a href="../about.html">About</a></li>
+
+				<li class="menu-item"><a href="../contact.html">Contact</a></li>
 			</ul>
 		</nav>
-
 	</header>
 
-	<hr>
-
 	<main>
-		<p><time datetime="2022-02-08">Feb 08, 2022</time></p>
+		<p class = "text-time"><time datetime="2022-02-08">Feb 08, 2022</time></p>
+
+		<h2>Spring Rolls</h2>
 
 		<nav>
 			<ul>
@@ -61,17 +68,17 @@
 		</nav>
 
 		<section id="introduction">
-			<h2>Introduction</h2>
+			<h3>Introduction</h3>
 
 			<figure>
-				<img src="../images/spring-rolls.jfif" alt="Spring Rolls" style="width:20%;">
+				<img src="../images/spring-rolls.webp" alt="Spring Rolls">
 
-				<figcaption>Colorful Vietnamese Spring Rolls prove that healthy food can also be satisfying and utterly delicious!</figcaption>
+				<figcaption class="justify">Colorful Vietnamese Spring Rolls prove that healthy food can also be satisfying and utterly delicious!</figcaption>
 			</figure>
 		</section>
 
 		<section id="information">
-			<h2>Recipe Information</h2>
+			<h3>Recipe Information</h3>
 			<ul>
 				<li>Prep: 45 mins</li>
 				<li>Cook: 5 mins</li>
@@ -105,7 +112,7 @@
 		</section>
 
 		<section id="ingredients">
-			<h2>Ingredients</h2>
+			<h3>Ingredients</h3>
 
 			<ul>
 				<li>2 ounces rice vermicelli</li>
@@ -126,11 +133,11 @@
 			</ul>
 		</section>
 		<section id="directions">
-			<h2>Directions</h2>
+			<h3>Directions</h3>
 
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/c5Z4fXVupao" title="YouTube video player: How to cook Spring Rolls" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/c5Z4fXVupao" title="YouTube video player: How to cook Spring Rolls" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-			<ol>
+			<ol class="justify">
 				<li>Bring a medium saucepan of water to boil. Boil rice vermicelli 3 to 5 minutes, or until al dente, and drain.</li>
 
 				<li>Fill a large bowl with warm water. Dip one wrapper into the hot water for 1 second to soften. Lay wrapper flat. In a row across the center, place 2 shrimp halves, a handful of vermicelli, basil, mint, cilantro and lettuce, leaving about 2 inches uncovered on each side. Fold uncovered sides inward, then tightly roll the wrapper, beginning at the end with the lettuce. Repeat with remaining ingredients.</li>
@@ -144,13 +151,11 @@
 			
 		</section>
 		<section id="note">
-			<h2>Cook's Note</h2>
+			<h3>Cook's Note</h3>
 
 			<p>The fish sauce, rice vermicelli, chili garlic sauce, hoisin sauce, and rice wrappers can be found at Asian food markets.</p>
 		</section>
 	</main>
-
-	<hr>
 
 	<footer>
 		<p>&copy; 2022 by Moon's Kitchen</p>
