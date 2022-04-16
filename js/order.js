@@ -1,9 +1,15 @@
 function validateForm() {
-    validateFood();
-    validateName();
-    validateNote();
-    validateDate();
-    validateAddress();
+    let isValidFood = validateFood();
+    let isValidName = validateName();
+    let isValidNote = validateNote();
+    let isValidDate = validateDate();
+    let isValidAddress = validateAddress();
+
+    let isValid = isValidFood && isValidName && isValidNote && isValidDate && isValidAddress;
+    if (isValid) {
+        alert("Thank you for ordering.\nWe received your order and will begin processing it soon.")
+    }
+    return isValid;
 }
 
 function validateFood() {
@@ -13,9 +19,10 @@ function validateFood() {
 
     if (food === '') {
         foodError.innerHTML = "Please select our product.";
-    } else {
-        foodError.innerHTML = "";
+        return false;
     }
+    foodError.innerHTML = "";
+    return true;
 }
 
 function validateName() {
@@ -24,11 +31,14 @@ function validateName() {
 
     if (nameLength == 0) {
         nameError.innerHTML = "Please fill out your name.";
-    } else if (nameLength > 100) {
-        nameError.innerHTML = "Your name should not exceed 100 characters.";
-    } else {
-        nameError.innerHTML = "";
+        return false;
     }
+    if (nameLength > 100) {
+        nameError.innerHTML = "Your name should not exceed 100 characters.";
+        return false;
+    }
+    nameError.innerHTML = "";
+    return true;
 }
 
 function validateNote() {
@@ -37,9 +47,10 @@ function validateNote() {
 
     if (note.length > 30) {
         noteError.innerHTML = "Message should not exceed 30 characters.";
-    } else {
-        noteError.innerHTML = "";
+        return false;
     }
+    noteError.innerHTML = "";
+    return true;
 }
 
 function validateDate() {
@@ -48,12 +59,17 @@ function validateDate() {
 
     if (date.length == 0) {
         dateError.innerHTML = "Please fill out the deliver date.";
-    } else if (new Date(date).getTime() < new Date().getTime()) {
-        dateError.innerHTML = "Delivery date must not be in the past.";
-    } else {
-        dateError.innerHTML = ""
+        return false;
     }
 
+    let today = new Date();
+    today.setHours(0, 0, 0, 0, 0);
+    if (new Date(date).getTime() < today.getTime()) {
+        dateError.innerHTML = "Delivery date must not be in the past.";
+        return false;
+    }
+    dateError.innerHTML = ""
+    return true;
 }
 
 function validateAddress() {
@@ -62,9 +78,12 @@ function validateAddress() {
 
     if (addressLength == 0) {
         addressError.innerHTML = "Please fill out the address.";
-    } else if (addressLength > 500) {
-        addressError.innerHTML = "Address should not exceed 500 characters.";
-    } else {
-        addressError.innerHTML = ""
+        return false;
     }
+    if (addressLength > 500) {
+        addressError.innerHTML = "Address should not exceed 500 characters.";
+        return false;
+    }
+    addressError.innerHTML = ""
+    return true;
 }
