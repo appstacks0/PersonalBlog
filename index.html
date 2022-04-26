@@ -26,36 +26,35 @@
 
 </head>
 
-<body>
-    <header id="header">
-        <p><q>No one is born a great cook, one learns by doing.</q> - Julia Child</p>
+<body class="container-fluid p-0 row">
+    <header id="header" class="container-fluid">
+        <nav class="navbar navbar-default position-absolute top-0 start-0">
+            <ul class="nav text-uppercase fw-bold">
+                <li class="nav-item"><a class="nav-link text-reset" href="index.html">Home</a></li>
 
-        <h1><a href="index.html">Moon's Kitchen</a></h1>
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link text-reset" data-bs-toggle="dropdown" role="button" aria-expanded="false">Recipes</a>
 
-
-
-        <nav>
-            <ul>
-                <li class="menu-item"><a href="index.html">Home</a></li>
-
-                <li class="menu-item"><span>Recipes</span>
-
-                    <ul class="dropdown">
-                        <li class="menu-sub-item"><a href="recipes/spring-rolls.html">Spring Rolls</a></li>
-
-                        <li class="menu-sub-item"><a href="recipes/caramel-shrimp.html">Caramel Shrimp</a></li>
-
-                        <li class="menu-sub-item"><a href="recipes/fried-tofu.html">Fried Tofu</a></li>
+                    <ul class="dropdown-menu bg-transparent">
+                        <li><a class="dropdown-item text-reset" href="recipes/spring-rolls.html">Spring Rolls</a></li>
+                        <li><a class="dropdown-item text-reset" href="recipes/caramel-shrimp.html">Caramel Shrimp</a></li>
+                        <li><a class="dropdown-item text-reset" href="recipes/fried-tofu.html">Fried Tofu</a></li>
                     </ul>
                 </li>
 
-                <li class="menu-item"><a href="order.html">Order</a></li>
+                <li class="nav-item"><a class="nav-link text-reset" href="order.html">Order</a></li>
 
-                <li class="menu-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-reset" href="about.html">About</a></li>
 
-                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link text-reset" href="contact.html">Contact</a></li>
             </ul>
         </nav>
+
+
+        <h1 class="h1 text-center position-absolute top-50 start-50 translate-middle"><a class="text-decoration-none text-reset" href="index.html">Moon's Kitchen</a></h1>
+
+        <p class="position-absolute bottom-0 start-0"><q class="fst-italic">No one is born a great cook, one learns by doing.</q> - Julia Child</p>
+
     </header>
 
 
@@ -63,45 +62,51 @@
     <main class="container-fluid">
         <div class="row">
 
-            <article class="col-md-4">
-                <img src="images/spring-rolls.webp" alt="" class="img-thumbnail">
+            <article class="col-md-6 col-lg-4 mt-3">
+                <div class="card border-light shadow-sm">
+                    <img src="images/spring-rolls.webp" alt="" class="card-img-top">
 
-                <div>
-                    <h2>Spring Rolls</h2>
+                    <div class="card-body">
+                        <h2 class="h2">Spring Rolls</h2>
 
-                    <p class="article-desc justify">Colorful Vietnamese Spring Rolls prove that healthy food can also be satisfying and utterly delicious!</p>
+                        <p class="article-desc justify">Colorful Vietnamese Spring Rolls prove that healthy food can also be satisfying and utterly delicious!</p>
 
-                    <a href="recipes/spring-rolls.html">Let's cook Spring Rolls</a>
+                        <a href="recipes/spring-rolls.html">Let's cook Spring Rolls</a>
 
-                    <p class="text-time"><time datetime="2022-02-08">Feb 08, 2022</time></p>
+                        <p class="text-time"><time datetime="2022-02-08">Feb 08, 2022</time></p>
+                    </div>
                 </div>
             </article>
 
-            <article class="col-md-4">
-                <img src="images/caramel-shrimp.jpg" alt="" class="img-thumbnail">
+            <article class="col-md-6 col-lg-4 mt-3">
+                <div class="card border-light shadow-sm">
+                    <img src="images/caramel-shrimp.jpg" alt="" class="card-img-top">
 
-                <div>
-                    <h2>Caramel Shrimp</h2>
+                    <div class="card-body">
+                        <h2 class="h2">Caramel Shrimp</h2>
 
-                    <p class="article-desc justify">Caramel Shrimp, which is made with fresh water prawn, fish sauce, and sugar, is one of the most delicious Vietnamese recipes.</p>
+                        <p class="article-desc justify">Caramel Shrimp, which is made with fresh water prawn, fish sauce, and sugar, is one of the most delicious Vietnamese recipes.</p>
 
-                    <a href="recipes/caramel-shrimp.html">Let's cook Caramel Shrimp</a>
+                        <a href="recipes/caramel-shrimp.html">Let's cook Caramel Shrimp</a>
 
-                    <p class="text-time"><time datetime="2022-02-10">Feb 10, 2022</time></p>
+                        <p class="text-time"><time datetime="2022-02-10">Feb 10, 2022</time></p>
+                    </div>
                 </div>
             </article>
 
-            <article class="col-md-4">
-                <img src="images/fried-tofu.jpg" alt="" class="img-thumbnail">
+            <article class="col-md-6 col-lg-4 mt-3">
+                <div class="card border-light shadow-sm">
+                    <img src="images/fried-tofu.jpg" alt="" class="card-img-top">
 
-                <div>
-                    <h2>Fried Tofu</h2>
+                    <div class="card-body">
+                        <h2 class="h2">Fried Tofu</h2>
 
-                    <p class="article-desc justify">Fried Tofu with Scallions is a rustic Northern Vietnamese dish, featuring crispy fried tofu dipped in scallion fish sauce mixture.</p>
+                        <p class="article-desc justify">Fried Tofu with Scallions is a rustic Northern Vietnamese dish, featuring crispy fried tofu dipped in scallion fish sauce mixture.</p>
 
-                    <a href="recipes/fried-tofu.html">Let's cook Fried Tofu</a>
+                        <a href="recipes/fried-tofu.html">Let's cook Fried Tofu</a>
 
-                    <p class="text-time"><time datetime="2022-02-12">Feb 12, 2022</time></p>
+                        <p class="text-time"><time datetime="2022-02-12">Feb 12, 2022</time></p>
+                    </div>
                 </div>
             </article>
 
@@ -110,7 +115,7 @@
 
     <footer>
         <p>&copy; 2022 by Moon's Kitchen</p>
-        <a href="#header">Go to top</a>
+        <a href="#header" class="btn btn-default btn-dark position-fixed bottom-0 end-0 m-2">Go to top</a>
     </footer>
 
 </body>

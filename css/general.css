@@ -1,36 +1,36 @@
-body {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #ffffff;
-}
-
-header {
-    height: 250px;
-    background-image: url('../images/header-background.png');
-    background-size: 100% auto;
-    position: relative;
-}
-
-header p:first-of-type {
-    font-size: 80%;
-    position: absolute;
-    bottom: 0px;
-}
-
-header q {
+    body {
+        font-family: 'Ubuntu', sans-serif;
+        background-color: #ffffff;
+        padding: 0;
+    }
+    
+    header h1 {
+        font-family: 'Kaushan Script', cursive;
+        background: rgba(255, 255, 255, 0.5);
+        font-size: 20vw;
+    }
+    
+    header {
+        height: 250px;
+        background-image: url('../images/header-background.png');
+        background-size: 100% auto;
+        position: relative;
+        margin: 0;
+    }
+    
+    header p {
+        font-size: 80%;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+    /* header q {
     font-style: italic;
 }
 
-header h1 {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 400%;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    width: 100%;
-    background: rgba(255, 255, 255, 0.5);
-}
+
 
 header h1 a {
     text-decoration: none;
@@ -87,11 +87,7 @@ header nav li {
     display: block;
 }
 
-.menu-item a:hover,
-.menu-item span:hover {
-    font-size: 110%;
-    cursor: pointer;
-}
+
 
 .menu-sub-item {
     clear: both;
@@ -116,10 +112,6 @@ main h2 {
 
 main h3 {
     font-size: 150%;
-}
-
-.justify {
-    text-align: justify;
 }
 
 .text-time {
@@ -147,4 +139,12 @@ footer a {
     padding: 0.5rem;
     text-decoration: none;
     font-size: 80%;
-}
+} */
+    
+    .dropdown-toggle::after {
+        content: none;
+    }
+    
+    .justify {
+        text-align: justify;
+    }
