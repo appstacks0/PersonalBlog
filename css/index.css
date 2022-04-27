@@ -1,57 +1,7 @@
 @import "general.css";
-main {
-    height: 90vh;
-}
-
-@media (min-width: 992px) {
-    article {
-        float: left;
-        width: 25%;
-        display: inline-block;
-    }
-    article:first-of-type {
-        margin-left: 2%;
-    }
-    article:last-of-type {
-        margin-right: 2%;
-    }
-}
-
-@media (min-width: 768px) {
-    article {
-        float: left;
-        width: 50%;
-        display: inline-block;
-    }
-    article:first-of-type {
-        margin-left: 2%;
-    }
-    article:last-of-type {
-        margin-right: 2%;
-    }
-}
-
-
-/* article:first-of-type {
-    margin-left: 2vw;
-} */
-
-
-/* article {
-        transform: translate(-50%, 0);
-    } */
-
-
-/* article:last-of-type {
-    margin-right: 2vw;
-} */
 
 article img {
     width: 100%;
-}
-
-article div {
-    margin: 2%;
 }
 
 .article-desc {
@@ -65,4 +15,4 @@ article div {
 
 article a {
     color: black;
-}
+} 
