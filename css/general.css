@@ -1,4 +1,5 @@
 @import "reponsive.css";
+
 body {
     font-family: 'Ubuntu', sans-serif;
     background-color: #ffffff;
@@ -90,10 +91,9 @@ header .icon {
 
 .topnav-responsive {
     display: block;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 1);
     position: fixed;
     width: 100%;
-    height: 100%;
     left: 0;
     top: 0;
     z-index: 5;
@@ -156,6 +156,23 @@ header nav a {
 
 /* #endregion */
 
+/* #region  MENU DROPDOWN */
+.dropdown {
+    visibility: hidden;
+    opacity: 1;
+    display: none;
+    min-width: 12rem;
+    margin-top: 1rem;
+}
+
+.menu-item:hover>ul,
+.dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+/* #endregion */
 
 /* #endregion */
 
@@ -163,32 +180,24 @@ header nav a {
     header .icon {
         display: none;
     }
+
     header nav {
         left: 0;
     }
+
     .topnav {
         display: table;
     }
+
     header nav li {
         float: left;
         padding: 1rem;
     }
-    /* #region  MENU DROPDOWN */
+
     .dropdown {
-        visibility: hidden;
-        opacity: 1;
         position: absolute;
-        display: none;
-        min-width: 12rem;
-        margin-top: 1rem;
     }
-    .menu-item:hover>ul,
-    .dropdown:hover {
-        visibility: visible;
-        opacity: 1;
-        display: block;
-    }
-    /* #endregion */
+
 }
 
 
