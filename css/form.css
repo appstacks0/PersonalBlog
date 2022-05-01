@@ -1,4 +1,9 @@
 @import "general.css";
+
+main {
+    margin: 2vh 3vw;
+}
+
 select,
 input:not([type=submit], [type=checkbox], [type=radio]),
 textarea {
@@ -40,4 +45,12 @@ input[type=submit]:hover {
 .error-message {
     color: red;
     font-size: 70%;
+}
+
+@media only screen and (min-width: 600px) {
+
+    main {
+        margin: 2vh 10vw;
+    }
+
 }
