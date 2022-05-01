@@ -44,11 +44,6 @@ header p:first-of-type {
 header h1 {
     font-family: 'Kaushan Script', cursive;
     font-size: 200%;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
     width: 100%;
     background: rgba(255, 255, 255, 0.5);
 }
@@ -57,9 +52,16 @@ header h1 {
     header h1 {
         font-size: 400%;
     }
+
+    .menu-item a,
+    .menu-sub-item a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
-header h1 a {
+header h1 a,
+header h1 a:hover {
     text-decoration: none;
     color: black;
 }
@@ -78,7 +80,6 @@ header .icon {
     margin: 1rem;
     color: white;
     background-color: black;
-    z-index: 10;
     border-radius: 0.2rem;
 }
 
@@ -106,6 +107,7 @@ header .icon {
     text-align: center;
     margin: 2em;
     color: white;
+    text-decoration: none;
 }
 
 
@@ -129,7 +131,7 @@ header nav ul {
 
 header nav a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .menu-item {
@@ -208,10 +210,12 @@ header nav a {
 
 main h2 {
     font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 main h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
 
 .justify {
@@ -241,14 +245,11 @@ footer a {
     position: fixed;
     right: 0;
     bottom: 0;
+    padding: 0.6rem 1rem;
     margin: 1rem;
-    border: 0.1rem black solid;
-    border-radius: 0.5rem;
-    color: black;
-    background: white;
-    padding: 0.5rem;
-    text-decoration: none;
-    font-size: 80%;
+    color: white;
+    background-color: black;
+    border-radius: 0.2rem;
 }
 
 
