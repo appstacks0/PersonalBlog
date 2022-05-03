@@ -8,43 +8,11 @@ select,
 input:not([type=submit], [type=checkbox], [type=radio]),
 textarea {
     font-family: 'Ubuntu', sans-serif;
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
 }
 
 input[type=radio],
 input[type=checkbox] {
     color: black;
-}
-
-textarea {
-    height: 200px;
-}
-
-input[type=submit] {
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    border: 2px black solid;
-    color: black;
-    background-color: white;
-}
-
-.error-message {
-    color: red;
-    font-size: 70%;
 }
 
 @media only screen and (min-width: 600px) {

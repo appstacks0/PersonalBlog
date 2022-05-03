@@ -4,6 +4,16 @@ article img {
     width: 100%;
 }
 
+article h2 {
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
 .article-desc {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -15,4 +25,16 @@ article img {
 
 article a {
     color: black;
-} 
+}
+
+footer {
+    margin: 2vh 3vw;
+}
+
+@media only screen and (min-width: 600px) {
+
+    footer {
+        margin: 2vh 1.5vw;
+    }
+
+}

@@ -1,4 +1,8 @@
 @import "general.css";
+main {
+    margin: 2vh 3vw;
+}
+
 main img {
     position: relative;
     left: 50%;
@@ -8,4 +12,12 @@ main img {
 
 main p {
     line-height: 150%;
+}
+
+@media only screen and (min-width: 600px) {
+
+    main {
+        margin: 2vh 10vw;
+    }
+
 }

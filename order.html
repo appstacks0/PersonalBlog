@@ -19,11 +19,15 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/21063e23e8.js" crossorigin="anonymous"></script>
 
-    <script src="js/order.js"></script>
+    <script>var message = 'Thank you for ordering.\nWe received your order and will begin processing it soon.';</script>
+
+    <script src="js/form.js"></script>
 
     <script src="js/menu.js"></script>
 </head>
@@ -68,38 +72,65 @@
     </header>
 
     <main>
-        <form>
-            <label for="food">Select Food</label>
-            <select id="food" name="Select Food" required onchange="validateFood()">
-				<option value="" disabled selected>--Select your food--</option>
-				<option value="spring-rolls">Spring Rolls</option>
-				<option value="caramel-shrimp">Caramel Shrimp</option>
-				<option value="fried-tofu">Fried Tofu</option>
-			</select>
-            <div class="error-message" id="food_error"></div><br>
+        <form id="form" class="was-validated" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="food">Select Food</label>
+                <select class="form-select" id="food" name="Select Food" required>
+                    <option value="" disabled selected>--Select your food--</option>
+                    <option value="spring-rolls">Spring Rolls</option>
+                    <option value="caramel-shrimp">Caramel Shrimp</option>
+                    <option value="fried-tofu">Fried Tofu</option>
+                </select>
+                <div class="invalid-feedback">Please select our product.</div>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
 
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="fullname" placeholder="Your name..." required onkeyup="validateName()">
-            <div class="error-message" id="name_error"></div><br>
+            <div class="mb-3">
+                <label class="form-label" for="name">Full Name</label>
+                <input class=" form-control" type="text" id="name" name="fullname" placeholder="Your name..." required
+                    maxlength="100">
+                <div class=" invalid-feedback">Please fill out your name.</div>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
 
-            <label for="note">Note</label>
-            <input type="text" id="note" name="note" placeholder="Delivery hour,..." onkeyup="validateNote()">
-            <div class="error-message" id="note_error"></div><br> Drinks
-            <label><input type="checkbox" id="coffee" name="drinks" value="coffee"> Coffee</label>
-            <label><input type="checkbox" id="tea" name="drinks" value="tea"> Tea</label>
-            <label><input type="checkbox" id="coke" name="drinks" value="coke"> Coke</label><br><br>
+            <div class="mb-3">
+                <label class="form-label" for="note">Note</label>
+                <input class=" form-control" type="text" id="note" name="note" placeholder="Delivery hour,..."
+                    maxlength="30">
+                <div class=" invalid-feedback">Message should not exceed 30 characters.</div>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
 
-            <label for="date">Deliver Date</label>
-            <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" required onchange="validateDate()">
-            <div class="error-message" id="date_error"></div><br>
+            <label class="form-label">Drinks</label>
+            <div class="mb-3 form-check form-check-inline">
+                <label><input type="checkbox" id="coffee" name="drinks" value="coffee"> Coffee</label>
+                <label><input type="checkbox" id="tea" name="drinks" value="tea"> Tea</label>
+                <label><input type="checkbox" id="coke" name="drinks" value="coke"> Coke</label>
+            </div>
 
-            <label for="address">Address</label>
-            <textarea id="address" name="address" placeholder="Your address..." required onkeyup="validateAddress()"></textarea>
-            <div class="error-message" id="address_error"></div><br> Call before deliver?
-            <label><input type="radio" id="yes" name="call" value="yes"> Yes</label>
-            <label><input type="radio" id="no" name="call" value="no" checked="true"> No</label><br><br>
+            <div class="mb-3">
+                <label class="form-label" for="date">Deliver Date</label>
+                <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" required>
+                <div class="invalid-feedback">Please fill out the deliver date.</div>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
 
-            <input type="submit" value="Order now" onclick="return validateForm()">
+            <div class="mb-3">
+                <label class="form-label" for="address">Address</label>
+                <textarea class=" form-control" id="address" name="address" placeholder="Your address..." required
+                    maxlength="500"></textarea>
+                <div class=" invalid-feedback">Please fill out the address.</div>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+
+            <label class="form-label">Call before deliver?</label>
+            <div class="mb-3 form-check form-check-inline">
+                <label><input type="radio" id="yes" name="call" value="yes"> Yes</label>
+                <label><input type="radio" id="no" name="call" value="no" checked="true"> No</label>
+            </div><br>
+
+            <input class="btn btn-dark" type="submit" value="Order now" onclick="return validateForm()">
         </form>
     </main>
 

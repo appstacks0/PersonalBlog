@@ -239,9 +239,17 @@ main h3 {
 
 
 /* #region FOOTER */
-
 footer {
     clear: both;
+    margin: 2vh 3vw;
+}
+
+@media only screen and (min-width: 600px) {
+
+    footer {
+        margin: 2vh 10vw;
+    }
+
 }
 
 footer p {
