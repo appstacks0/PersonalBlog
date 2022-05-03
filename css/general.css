@@ -144,6 +144,10 @@ header nav a {
     font-size: 80%;
 }
 
+.menu-sub-item a{
+    color: white;
+}
+
 .menu-item a:hover,
 .menu-item span:hover {
     font-size: 110%;
@@ -165,6 +169,10 @@ header nav a {
     display: none;
     min-width: 12rem;
     margin-top: 1rem;
+    background: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    border-width: 0.1rem;
+    border-radius: 0.5rem;
 }
 
 .menu-item:hover>ul,
