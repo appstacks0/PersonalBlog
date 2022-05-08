@@ -25,47 +25,83 @@
 
 	<script src="https://kit.fontawesome.com/21063e23e8.js" crossorigin="anonymous"></script>
 
-	<script src="../js/menu.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 	<header id="header">
-		<p><q>No one is born a great cook, one learns by doing.</q> - Julia Child</p>
 
-		<h1 class="text-center position-absolute top-50 start-50 translate-middle"><a href="../index.html">Moon's
-				Kitchen</a></h1>
+        <nav class="navbar navbar-expand-sm nav-bg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand font-brand" href="../index.html">Moon's Kitchen</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active nav-item-color" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active nav-item-color" href="#" role="button"
+                                data-bs-toggle="dropdown">Recipes</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item nav-sub-item" href="spring-rolls.html">Spring
+                                        Rolls</a></li>
+                                <li><a class="dropdown-item nav-sub-item" href="caramel-shrimp.html">Caramel
+                                        Shrimp</a></li>
+                                <li><a class="dropdown-item nav-sub-item" href="fried-tofu.html">Fried Tofu</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active nav-item-color" href="../order.html">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active nav-item-color" href="../about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active nav-item-color" href="../contact.html">Contact</a>
+                        </li>
 
-		<nav>
-			<ul class="topnav" id="menu">
-				<li class="menu-item"><a href="../index.html">Home</a></li>
-
-				<li class="menu-item"><span>Recipes</span>
-
-					<ul class="dropdown">
-						<li class="menu-sub-item"><a href="spring-rolls.html">Spring Rolls</a></li>
-
-						<li class="menu-sub-item"><a href="caramel-shrimp.html">Caramel Shrimp</a></li>
-
-						<li class="menu-sub-item"><a href="fried-tofu.html">Fried Tofu</a></li>
-					</ul>
-				</li>
-
-				<li class="menu-item"><a href="../order.html">Order</a></li>
-
-				<li class="menu-item"><a href="../about.html">About</a></li>
-
-				<li class="menu-item"><a href="../contact.html">Contact</a></li>
-
-			</ul>
-		</nav>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 
-		<a href="javascript:void(0);" class="icon" id="icon" onclick="onClickMenuIcon()">
-			<i class="fa fa-bars"></i>
-		</a>
 
+        <div class="banner">
+            <div id="banner" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-	</header>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#banner" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#banner" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../images/banner1.jpg" alt="" class="d-block"
+                            style="width: 100%;object-fit: cover;object-position: 100% 50%;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/banner2.jpg" alt="" class="d-block"
+                            style="width: 100%;object-fit: cover;object-position: 100% 50%;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/banner3.jpg" alt="" class="d-block"
+                            style="width: 100%;object-fit: cover;object-position: 100% 50%;">
+                    </div>
+                </div>
+
+            </div>
+            <h1 class="font-brand text-center position-absolute top-50 start-50 translate-middle"><a
+                    href="../index.html">Moon's
+                    Kitchen</a></h1>
+        </div>
+    </header>
 
 	<main>
 		<p class="text-time"><time datetime="2022-02-10">Feb 10, 2022</time></p>

@@ -8,208 +8,70 @@ body {
 
 /* #region  HEADER */
 
-header {
-    height: 20vh;
-    background-image: url('../images/header-background-small.png');
-    background-size: 100% auto;
-    position: relative;
+/* #region  HEADER BANNER */
+.font-brand {
+    font-family: 'Kaushan Script', cursive;
 }
+
+.banner {
+    position: relative;
+} 
 
 @media only screen and (min-width: 769px) {
-    header {
-        height: 35vh;
-        background-image: url('../images/header-background.png');
+    .banner {
+        height: 30vh;
+    }
+
+    .carousel-item {
+        height: 30vh;
     }
 }
-
-
-/* #region  HEADER QUOTE */
-
-header q {
-    font-style: italic;
-}
-
-header p:first-of-type {
-    font-size: 80%;
-    position: absolute;
-    bottom: 0px;
-}
-
-
 /* #endregion */
 
 
 /* #region  HEADER H1 */
-
-header h1 {
-    font-family: 'Kaushan Script', cursive;
+.banner h1 {
     font-size: 200%;
     width: 100%;
     background: rgba(255, 255, 255, 0.5);
+    z-index: 5;
 }
 
 @media only screen and (min-width: 600px) {
-    header h1 {
+    .banner h1 {
         font-size: 400%;
-    }
-
-    .menu-item a,
-    .menu-sub-item a {
-        text-decoration: none;
-        color: black;
     }
 }
 
-header h1 a,
-header h1 a:hover {
+.banner h1 a,
+.banner h1 a:hover {
     text-decoration: none;
     color: black;
 }
-
-
 /* #endregion */
 
 
 /* #region  HEADER NAVIGATION */
-
-header .icon {
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 0.7rem 1rem;
-    margin: 1rem;
-    color: white;
+.nav-bg {
     background-color: black;
-    border-radius: 0.2rem;
 }
 
-
-/* #region  HIDE/SHOW NAV ONCLICK */
-
-.topnav {
-    display: none;
-}
-
-.topnav-responsive {
-    display: block;
-    background: rgba(0, 0, 0, 1);
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 5;
-}
-
-.topnav-responsive a,
-.topnav-responsive span {
-    float: none;
-    display: block;
-    text-align: center;
-    margin: 2em;
-    color: white;
-    text-decoration: none;
-}
-
-
-/* #endregion */
-
-
-/* #region  MENU STYLE */
-
-header nav {
-    position: absolute;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-header nav a {
-    text-decoration: none;
+.nav-item-color {
     color: white;
 }
 
-.menu-item {
-    min-width: 7rem;
+.nav-sub-item {
+    color: black;
+    background-color: white;
 }
 
-.menu-sub-item {
-    clear: both;
-    width: 100%;
-    font-size: 80%;
-}
-
-.menu-sub-item a{
+.nav-sub-item:hover {
+    background-color: black;
     color: white;
 }
 
-.menu-item a:hover,
-.menu-item span:hover {
-    font-size: 110%;
-    cursor: pointer;
-}
-
-.menu-sub-item:hover {
-    font-size: 90%;
-    text-align: left;
-}
-
 
 /* #endregion */
-
-/* #region  MENU DROPDOWN */
-.dropdown {
-    visibility: hidden;
-    opacity: 1;
-    display: none;
-    min-width: 12rem;
-    margin-top: 1rem;
-    background: rgb(0, 0, 0);
-    border-color: rgb(0, 0, 0);
-    border-width: 0.1rem;
-    border-radius: 0.5rem;
-}
-
-.menu-item:hover>ul,
-.dropdown:hover {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-}
-
-/* #endregion */
-
-/* #endregion */
-
-@media only screen and (min-width: 600px) {
-    header .icon {
-        display: none;
-    }
-
-    header nav {
-        left: 0;
-    }
-
-    .topnav {
-        display: table;
-    }
-
-    header nav li {
-        float: left;
-        padding: 1rem;
-    }
-
-    .dropdown {
-        position: absolute;
-    }
-
-}
-
 
 /* #endregion */
 
