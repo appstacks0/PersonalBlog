@@ -1,4 +1,4 @@
-    function validateForm() {
+function validateForm() {
         let isValidName = validateName();
         let isValidEmail = validateEmail();
         let isValidSubject = validateSubject();
@@ -28,6 +28,14 @@
         return true;
     }
 
+    /**
+     * Validates the email input field in the contact form.
+     *
+     * This function retrieves and trims the email value from the DOM, then checks if it is empty, exceeds 100 characters, or fails to match a standard email format.
+     * It displays a corresponding error message in the designated error element for any validation failures and clears the message if the email is valid.
+     *
+     * @returns {boolean} True if the email is valid; false otherwise.
+     */
     function validateEmail() {
         let emailValue = document.getElementById('email').value.trim();
         let emailLength = emailValue.length;
