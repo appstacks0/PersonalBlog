@@ -33,7 +33,7 @@
         let emailLength = emailValue.length;
         let emailError = document.getElementById('email_error');
 
-        document.getElementById('email').oninvalid
+        // document.getElementById('email').oninvalid
 
         if (emailLength == 0) {
             emailError.innerHTML = "Please fill out your email.";
