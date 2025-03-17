@@ -29,12 +29,18 @@ function validateForm() {
     }
 
     /**
-     * Validates the email input field in the contact form.
+     * Validates the email input retrieved from the DOM.
      *
-     * This function retrieves and trims the email value from the DOM, then checks if it is empty, exceeds 100 characters, or fails to match a standard email format.
-     * It displays a corresponding error message in the designated error element for any validation failures and clears the message if the email is valid.
+     * This function trims the value from the email input element and checks that:
+     * - It is not empty.
+     * - It does not exceed 100 characters.
+     * - It matches a basic email format.
      *
-     * @returns {boolean} True if the email is valid; false otherwise.
+     * On validation failure, it sets an appropriate error message in the corresponding error element and returns false. Otherwise, it clears any existing error and returns true.
+     *
+     * @returns {boolean} True if the email passes all validation checks; otherwise, false.
+     *
+     * @remark The custom handling for the email input's invalid state has been disabled by commenting out the related oninvalid event binding.
      */
     function validateEmail() {
         let emailValue = document.getElementById('email').value.trim();
